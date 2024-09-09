@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- Layout for pages that need navigation -->
+    <header v-if="showMenu">
+      <h1>Vue example</h1>
+      <nav>
+        <ul>
+          <li><router-link to="/demo1">demo1</router-link></li>
+          <li><router-link to="/demo2">demo2</router-link></li>
+          <li><router-link to="/demo3">demo3</router-link></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- View for routing -->
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  computed: {
+    showMenu() {
+      return ![
+        '/demo1', 
+        '/demo2', 
+        '/demo3',
+      ].includes(this.$route.path);
+    }
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
