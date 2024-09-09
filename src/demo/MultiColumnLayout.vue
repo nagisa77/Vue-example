@@ -1,20 +1,18 @@
 <template>
   <div class="multi-column-layout">
-    <h2>Multi Column Masonry Layout</h2>
-    <div class="masonry">
-      <!-- <div class="masonry-item" v-for="(image, index) in images" :key="index">
-        <img :src="image.src" :alt="'Placeholder Image ' + index" class="responsive-image" />
-      </div> -->
-
-      <el-card class="masonry-item" v-for="(image, index) in images" :key="index" :body-style="{ padding: '0px' }">
-        <img :src="image.src" :alt="'Placeholder Image ' + index" class="responsive-image" />        
-        <div style="padding: 14px;">
-          <span>图片描述</span>
-          <div class="bottom clearfix">
-            <time class="time">{{ currentDate }}</time>
+    <div class="content-container">
+      <h2>Multi Column Masonry Layout</h2>
+      <div class="masonry">
+        <el-card class="masonry-item" v-for="(image, index) in images" :key="index" :body-style="{ padding: '0px' }">
+          <img :src="image.src" :alt="'Placeholder Image ' + index" class="responsive-image" />
+          <div style="padding: 18px;">
+            <span>图片描述</span>
+            <div class="bottom clearfix">
+              <time class="time">{{ currentDate }}</time>
+            </div>
           </div>
-        </div>
-      </el-card>
+        </el-card>
+      </div>
     </div>
   </div>
 </template>
@@ -48,16 +46,21 @@ export default {
 
 <style scoped>
 .multi-column-layout {
-  padding: 20px;
+  padding: 8px;
 }
 
 .masonry {
-  column-gap: 20px;
+  column-gap: 8px;
 }
 
 .masonry-item {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   break-inside: avoid;
+}
+
+.content-container {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .responsive-image {
@@ -66,25 +69,19 @@ export default {
 }
 
 /* 响应式布局 */
-@media (min-width: 1200px) {
-  .masonry {
-    column-count: 4;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 600px) {
   .masonry {
     column-count: 3;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 400px) and (max-width: 599px) {
   .masonry {
     column-count: 2;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 399px) {
   .masonry {
     column-count: 1;
   }
