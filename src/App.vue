@@ -5,9 +5,7 @@
       <h1>Vue example</h1>
       <nav>
         <ul>
-          <li><router-link to="/demo1">demo1</router-link></li>
-          <li><router-link to="/demo2">demo2</router-link></li>
-          <li><router-link to="/demo3">demo3</router-link></li>
+          <li><router-link to="/multi_column_layout">Multi column layout</router-link></li>
         </ul>
       </nav>
     </header>
@@ -22,9 +20,7 @@ export default {
   computed: {
     showMenu() {
       return ![
-        '/demo1', 
-        '/demo2', 
-        '/demo3',
+        '/multi_column_layout', 
       ].includes(this.$route.path);
     }
   }
