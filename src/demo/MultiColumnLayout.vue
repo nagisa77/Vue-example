@@ -1,7 +1,7 @@
 <template>
   <div class="multi-column-layout">
     <div class="content-container">
-      <h2>Multi Column Masonry Layout</h2>
+      <h2 class="title">Multi Column Masonry Layout</h2>
       <div class="masonry">
         <el-card class="masonry-item" v-for="(image, index) in images" :key="index" :body-style="{ padding: '0px' }">
           <img :src="image.src" :alt="'Placeholder Image ' + index" class="responsive-image" />
@@ -33,11 +33,26 @@ export default {
         { 'src': 'https://via.placeholder.com/900x100' },
         { 'src': 'https://via.placeholder.com/1400x150' },
         { 'src': 'https://via.placeholder.com/1000x150' },
+        { 'src': 'https://via.placeholder.com/300x200' },
+        { 'src': 'https://via.placeholder.com/900x100' },
+        { 'src': 'https://via.placeholder.com/1400x150' },
+        { 'src': 'https://via.placeholder.com/1000x150' },
         { 'src': 'https://via.placeholder.com/800x150' },
         { 'src': 'https://via.placeholder.com/250' },
         { 'src': 'https://via.placeholder.com/200' },
         { 'src': 'https://via.placeholder.com/600x150' },
         { 'src': 'https://via.placeholder.com/1100x100' },
+        { 'src': 'https://via.placeholder.com/800x150' },
+        { 'src': 'https://via.placeholder.com/250' },
+        { 'src': 'https://via.placeholder.com/200' },
+        { 'src': 'https://via.placeholder.com/600x150' },
+        { 'src': 'https://via.placeholder.com/1100x100' },
+        { 'src': 'https://via.placeholder.com/700x100' },
+        { 'src': 'https://via.placeholder.com/500x100' },
+        { 'src': 'https://via.placeholder.com/1200x150' },
+        { 'src': 'https://via.placeholder.com/400x150' },
+        { 'src': 'https://via.placeholder.com/1300x100' },
+        { 'src': 'https://via.placeholder.com/150' },
       ],
     };
   },
@@ -66,6 +81,13 @@ export default {
 .responsive-image {
   width: 100%;
   display: block;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
 }
 
 /* 响应式布局 */

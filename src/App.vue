@@ -6,6 +6,7 @@
       <nav>
         <ul>
           <li><router-link to="/multi_column_layout">Multi column layout</router-link></li>
+          <li><router-link to="/navigation_bar">Navigation bar</router-link></li>
         </ul>
       </nav>
     </header>
@@ -21,6 +22,7 @@ export default {
     showMenu() {
       return ![
         '/multi_column_layout', 
+        '/navigation_bar',
       ].includes(this.$route.path);
     }
   }
