@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 import MultiColumnLayout from './demo/MultiColumnLayout.vue';
 
@@ -7,7 +7,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.NODE_ENV === 'production' ? '/Vue-example/' : '/'),
+  history: createWebHashHistory(process.env.NODE_ENV === 'production' ? '/Vue-example/' : '/'),
   routes,
 });
 
