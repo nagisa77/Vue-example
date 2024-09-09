@@ -75,13 +75,13 @@ export default {
   }
 }
 
-@media (min-width: 400px) and (max-width: 599px) {
+@media (min-width: 350px) and (max-width: 599px) {
   .masonry {
     column-count: 2;
   }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 349px) {
   .masonry {
     column-count: 1;
   }
