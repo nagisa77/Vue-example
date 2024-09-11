@@ -1,0 +1,6 @@
+{
+  "greeting": "你好",
+  "message": {
+    "hello": "这是我的I18N页面"
+  }
+}
