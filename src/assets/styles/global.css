@@ -6,6 +6,7 @@
   --chatgpt-background-color  : #ffffff;
   --chatgpt-menu-button-hover-color: #ece8ed;
   --chatgpt-button-hover-color: #f9f9f9;
+  --chatgpt-text-color: #8c8c8c;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
   --chatgpt-background-color  : #27232c;
   --chatgpt-menu-button-hover-color: #ece8ed;
   --chatgpt-button-hover-color: #f9f9f9;
+  --chatgpt-text-color: #8c8c8c;
 }
 
 html, body {
