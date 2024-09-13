@@ -9,6 +9,7 @@
           <li><router-link to="/navigation_bar">Navigation bar</router-link></li>
           <li><router-link to="/i18n">I18N</router-link></li>
           <li><router-link to="/night_mode">Night Mode</router-link></li>
+          <li><router-link to="/chatgpt">ChatGPT</router-link></li>
         </ul>
       </nav>
     </header>
@@ -27,6 +28,7 @@ export default {
         '/navigation_bar',
         '/i18n',
         '/night_mode',
+        '/chatgpt',
       ].includes(this.$route.path);
     }
   }
