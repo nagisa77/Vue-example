@@ -16,21 +16,24 @@
 
     <div class="chatgpt-main-container">
       <div class="header">
-        <div>
-          <el-button class="chatgpt-button icon-button" v-if="isMainContainerMenuItemShow">
+        <div  v-if="isMainContainerMenuItemShow">
+          <el-button class="chatgpt-button icon-button">
             <img :src="isMobile ? mobileMenuIcon : menuIcon" alt="ChatGPT Menu Icon" class="menu-icon"
               @click="toggleMenu">
           </el-button>
-          <el-button class="chatgpt-button icon-button" v-if="isMainContainerMenuItemShow">
+          <el-button class="chatgpt-button icon-button">
             <img :src="newChatIcon" alt="ChatGPT Menu Icon" class="menu-icon">
           </el-button>
         </div>
+
         <el-button class="chatgpt-model-select-button icon-button">
           ChatGPT 4o
           <img :src="arrowDownIcon" alt="ChatGPT Menu Icon" class="chatgpt-model-select-icon menu-icon">
         </el-button>
 
-        <el-image :src="avatarIcon" alt="ChatGPT Menu Icon" class="chatgpt-avatar-icon"></el-image>
+        <div>
+          <el-image :src="avatarIcon" alt="ChatGPT Menu Icon" class="chatgpt-avatar-icon"></el-image>
+        </div>
       </div>
       <div class="logo-container">
         <img :src="logoIcon" alt="ChatGPT Icon" class="chatgpt-logo-icon">
@@ -135,6 +138,7 @@ export default {
   border-radius: 50%;
   background-color: var(--chatgpt-text-color);
   margin-right: 10px;
+  border: none;
 }
 
 .input-area-container {
