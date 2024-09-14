@@ -16,7 +16,7 @@
 
     <div class="chatgpt-main-container">
       <div class="header">
-        <div  v-if="isMainContainerMenuItemShow">
+        <div v-if="isMainContainerMenuItemShow">
           <el-button class="chatgpt-button icon-button">
             <img :src="isMobile ? mobileMenuIcon : menuIcon" alt="ChatGPT Menu Icon" class="menu-icon"
               @click="toggleMenu">
@@ -35,6 +35,7 @@
           <el-image :src="avatarIcon" alt="ChatGPT Menu Icon" class="chatgpt-avatar-icon"></el-image>
         </div>
       </div>
+      
       <div class="logo-container">
         <img :src="logoIcon" alt="ChatGPT Icon" class="chatgpt-logo-icon">
       </div>
@@ -245,6 +246,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  background-color: var(--chatgpt-background-color);
 }
 
 .chatgpt-model-select-icon {
