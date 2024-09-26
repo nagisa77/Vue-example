@@ -10,6 +10,8 @@
           <li><router-link to="/i18n">I18N</router-link></li>
           <li><router-link to="/night_mode">Night Mode</router-link></li>
           <li><router-link to="/chatgpt">ChatGPT</router-link></li>
+          <li><router-link to="/animation">Animation</router-link></li>
+          <li><router-link to="/markdown">Markdown</router-link></li>
         </ul>
       </nav>
     </header>
@@ -29,6 +31,8 @@ export default {
         '/i18n',
         '/night_mode',
         '/chatgpt',
+        '/animation',
+        '/markdown',
       ].includes(this.$route.path);
     }
   }
